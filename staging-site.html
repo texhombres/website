@@ -3,24 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tex-Hombres - Staging Site</title>
-    
+    <title>The Tex-Hombres - Official Website</title>
+    <meta name="description" content="The official website for The Tex-Hombres, an Austin-based band.">
+
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/bna3ddy.css">
-    
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1>The Tex-Hombres</h1>
-    <p>Staging site with Adobe Fonts loaded.</p>
-    
-    <!-- Font examples -->
-    <div class="font-examples">
-        <h2 class="dunbar-tall-book">Dunbar Tall Book Example</h2>
-        <h2 class="dunbar-tall-medium">Dunbar Tall Medium Example</h2>
-        <p class="lato-medium">Lato Medium Example Text</p>
-        <p class="lato-bold">Lato Bold Example Text</p>
-    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <img src="assets/images/logo/texhombres-website-logo-main.png" alt="The Tex-Hombres Logo">
+            </a>
+
+            <div class="nav-right">
+                <ul class="nav-menu-desktop">
+                    <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="#video" class="nav-link">VIDEO</a></li>
+                    <li class="nav-item"><a href="#shows" class="nav-link">SHOWS</a></li>
+                    <li class="nav-item"><a href="#news" class="nav-link">NEWS</a></li>
+                    <li class="nav-item"><a href="#songlist" class="nav-link">SONG LIST</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+
+                <div class="social-icons desktop-social-icons">
+                    <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="header-border-container">
+            <div class="gradient-bar"></div>
+            <div class="gradient-bar"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (outside header for proper z-index) -->
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="#video" class="nav-link">VIDEO</a></li>
+        <li class="nav-item"><a href="#shows" class="nav-link">SHOWS</a></li>
+        <li class="nav-item"><a href="#news" class="nav-link">NEWS</a></li>
+        <li class="nav-item"><a href="#songlist" class="nav-link">SONG LIST</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+        <li class="nav-item mobile-social-icons">
+            <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+    </ul>
+
+    <!-- Main content with image -->
+    <main>
+        <img src="assets/images/temp/texhombres-website-temp1.jpg" alt="The Tex-Hombres" style="width: 100%; height: auto; display: block;">
+    </main>
+
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
