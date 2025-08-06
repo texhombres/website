@@ -1,0 +1,42 @@
+/* Adobe Fonts - Dunbar Tall and Lato */
+
+/* Dunbar Tall Book */
+.dunbar-tall-book {
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Dunbar Tall Medium */
+.dunbar-tall-medium {
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Lato Medium */
+.lato-medium {
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Lato Bold */
+.lato-bold {
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Base typography classes for easy use */
+h1, h2, h3 {
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
