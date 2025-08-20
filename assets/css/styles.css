@@ -13,14 +13,24 @@ h2 {
     color: #ffffff;
     padding: 15px 30px;
     text-decoration: none;
-    font-family: "industry", sans-serif;
+    font-family: "dunbar-tall", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: black;
+    background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
+    color: white;
+}
+
+/* Button element specific styles */
+button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    display: block;
+    margin: 30px auto 0;
 }
 
 /* General Styling */
@@ -142,7 +152,7 @@ h2 {
     color: #000000;
     padding: 15px 30px;
     text-decoration: none;
-    font-family: "industry", sans-serif;
+    font-family: "dunbar-tall", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 30px;
@@ -150,7 +160,7 @@ h2 {
 }
 
 .btn-watch-more:hover {
-    background-color: #000000;
+    background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
     color: #ffffff;
 }
 
@@ -183,7 +193,7 @@ h2 {
 .shows-list {
     max-width: 800px;
     margin: 40px auto;
-    font-family: "industry", sans-serif;
+    font-family: "dunbar-tall", sans-serif;
     font-weight: 400;
 }
 
@@ -239,6 +249,11 @@ h2 {
         margin: 0 auto;
     }
 
+    .show-link:hover {
+        background: linear-gradient(90deg, #905e26 0%, #f5ec9b 50%, #905e26 100%);
+        color: #000000;
+    }
+
     .show-link.tickets {
         color: #1a1a1a;
     }
@@ -273,7 +288,7 @@ h2 {
     gap: 15px 30px;
     max-width: 1200px;
     margin: 40px auto;
-    text-align: left;
+    text-align: center;
 }
 
 .song-item {
@@ -297,17 +312,17 @@ h2 {
     }
 }
 
-/* Mobile - 1 column */
+/* Mobile - 2 columns minimum */
 @media(max-width: 768px) {
     .songs-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 15px;
         text-align: center;
         max-width: 600px;
     }
     
     .song-item {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -405,11 +420,6 @@ h2 {
     color: #888;
 }
 
-.submit-btn {
-    display: block;
-    margin: 30px auto 0;
-    min-width: 150px;
-}
 
 /* Footer Bottom */
 .footer-bottom {
@@ -580,7 +590,7 @@ body {
 }
 
 .nav-item a:hover {
-    color: #f5ec9b;
+    color: #bb9a57;
 }
 
 /* Social Icons */
