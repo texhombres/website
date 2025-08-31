@@ -351,21 +351,14 @@ button.btn {
 
     .show-link {
         text-align: center;
-        padding: 10px;
-        background: #bb9a57;
-        color: #1a1a1a;
-        display: inline-block;
-        width: 50%;
-        margin: 0 auto;
+        color: #bb9a57;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
     }
 
     .show-link:hover {
-        background: linear-gradient(90deg, #905e26 0%, #f5ec9b 50%, #905e26 100%);
-        color: #000000;
-    }
-
-    .show-link.tickets {
-        color: #1a1a1a;
+        color: #ffffff;
     }
 }
 
