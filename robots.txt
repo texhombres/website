@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://thetexhombres.com/sitemap.xml
+
+# Disallow crawling of specific files
+Disallow: /.DS_Store
+Disallow: /.gitignore

@@ -36,6 +36,48 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- JSON-LD for The Tex-Hombres -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "@id": "https://thetexhombres.com/#band",
+      "name": "The Tex-Hombres",
+      "url": "https://thetexhombres.com/",
+      "image": "https://thetexhombres.com/assets/images/og/texhombres-website-image-og.jpg",
+      "logo": "https://thetexhombres.com/assets/images/logo/texhombres-website-logo-main.png",
+      "genre": "Country",
+      "foundingDate": "2023",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Austin, Texas"
+      },
+      "member": [
+        { "@type": "Person", "name": "Michael Matthews", "roleName": "Guitar & Vocals" },
+        { "@type": "Person", "name": "Pablo Trujillo", "roleName": "Steel Guitar, Guitar & Vocals" },
+        { "@type": "Person", "name": "Lucas Seiferman", "roleName": "Guitar & Vocals" },
+        { "@type": "Person", "name": "Will Krause", "roleName": "Bass" },
+        { "@type": "Person", "name": "Jimmy Milner", "roleName": "Drums" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/thetexhombres/"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: site entity -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://thetexhombres.com/#website",
+      "url": "https://thetexhombres.com/",
+      "name": "The Tex-Hombres",
+      "publisher": { "@id": "https://thetexhombres.com/#band" },
+      "inLanguage": "en"
+    }
+    </script>
 </head>
 <body>
 
@@ -127,7 +169,7 @@
                 or your next corporate event, The Tex-Hombres are here to share the music that
                 brought them together—and maybe bring you along for the ride.
               </p>
-            <a href="#contact" class="btn">CONTACT FOR BOOKING</a>
+            <a href="#contact" class="btn"><p>CONTACT FOR BOOKING</p></a>
         </section>
 
         <!-- video section -->
@@ -137,7 +179,7 @@
             <div class="video-gallery">
                 <div class="video-item large">
                     <div class="video-embed-container">
-                        <iframe src="https://www.youtube.com/embed/HYRFgWbalBE?si=yZtjPFibutnaRNpp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/BSmEf_VFZFg?si=uRd2UDTKbLvcRgVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-item small">

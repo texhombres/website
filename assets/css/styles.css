@@ -1,3 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "dunbar-tall", sans-serif;
+    font-weight: 400;
+    /* Dunbar Tall Book */
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    z-index: 2000;
+}
+
+.header-border-container {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.gradient-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #905e26 0%, #f5ec9b 50%, #905e26 100%);
+}
+
+.gradient-bar:first-child {
+    margin-bottom: 4px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 5% 15px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-menu-desktop {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Mobile Menu (outside header) */
+.nav-menu {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+    gap: 0;
+    padding: 20px 0;
+    z-index: 100;
+    list-style: none;
+    display: none;
+    /* Hidden on desktop by default */
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #bb9a57;
+}
+
 h2 {
     font-family: "dunbar-tall", sans-serif;
     font-weight: 700;
@@ -16,12 +110,41 @@ h2 {
     font-family: "dunbar-tall", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    position: relative;
+    transition: color 2s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
+    opacity: 0;
+    transition: opacity 2s ease;
+    z-index: 1;
+}
+
+.btn:hover::before {
+    opacity: 1;
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
-    color: white;
+    color: #ffffff;
+}
+
+/* Optional: Make the text show on top */
+.btn p {
+    position: relative; /* Bring the text above the pseudo-element */
+    z-index: 2; /* Ensure the text is visible */
+    display: inline;
+}
+
+/* 404 page button styling */
+.about-section a.btn {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 30px auto 0 !important;
 }
 
 /* Button element specific styles */
@@ -36,7 +159,7 @@ button.btn {
 /* General Styling */
 
 .hero-image {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 20%, transparent 80%, rgba(0,0,0,0.8)), url('../images/photos/texhombres-website-photo1.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 20%, transparent 80%, rgba(0, 0, 0, 0.8)), url('../images/photos/texhombres-website-photo1.jpg');
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +254,8 @@ button.btn {
 
 .video-embed-container {
     position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     background-color: #000;
@@ -146,23 +270,6 @@ button.btn {
     border: 0;
 }
 
-.btn-watch-more {
-    display: inline-block;
-    background-color: #bb9a57;
-    color: #000000;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-family: "dunbar-tall", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-watch-more:hover {
-    background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
-    color: #ffffff;
-}
 
 /* Shows Section */
 .shows-section {
@@ -211,7 +318,10 @@ button.btn {
     border-bottom: none;
 }
 
-.show-date, .show-venue, .show-time, .show-link {
+.show-date,
+.show-venue,
+.show-time,
+.show-link {
     font-size: 1.1rem;
     text-transform: uppercase;
 }
@@ -320,7 +430,7 @@ button.btn {
         text-align: center;
         max-width: 600px;
     }
-    
+
     .song-item {
         font-size: 0.85rem;
     }
@@ -481,117 +591,26 @@ button.btn {
         padding: 30px 20px;
         margin: 0 10px 30px;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .form-group.full-width {
         grid-column: span 1;
     }
-    
+
     .footer-nav a {
         display: block;
         margin: 10px 0;
     }
-    
+
     .footer-social a {
         margin: 0 10px;
     }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: "dunbar-tall", sans-serif;
-    font-weight: 400; /* Dunbar Tall Book */
-    font-style: normal;
-    overflow-x: hidden;
-}
-
-/* Header and Navigation */
-.main-header {
-    background-color: #000000;
-    position: relative;
-    width: 100%;
-    z-index: 2000;
-}
-
-.header-border-container {
-    padding-top: 10px;
-    padding-bottom: 25px;
-}
-
-.gradient-bar {
-    height: 2px;
-    background: linear-gradient(90deg, #905e26 0%, #f5ec9b 50%, #905e26 100%);
-}
-
-.gradient-bar:first-child {
-    margin-bottom: 4px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 25px 5% 15px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.nav-logo img {
-    height: 60px;
-    width: auto;
-}
-
-.nav-menu-desktop {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 2rem;
-}
-
-/* Mobile Menu (outside header) */
-.nav-menu {
-    position: absolute;
-    left: 0;
-    top: -100%;
-    flex-direction: column;
-    background-color: #000;
-    width: 100%;
-    text-align: center;
-    transition: top 0.3s ease-in-out;
-    gap: 0;
-    padding: 20px 0;
-    z-index: 100;
-    list-style: none;
-    display: none; /* Hidden on desktop by default */
-}
-
-.nav-item a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    transition: color 0.3s ease;
-}
-
-.nav-item a:hover {
-    color: #bb9a57;
-}
 
 /* Social Icons */
 .desktop-social-icons {
@@ -601,7 +620,8 @@ body {
 }
 
 .mobile-social-icons {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
 }
 
 .social-icons a {
@@ -657,10 +677,11 @@ body {
     .nav-menu-desktop {
         display: none;
     }
-    
+
     .nav-menu {
         display: flex;
-        top: -100%; /* Start hidden */
+        top: -100%;
+        /* Start hidden */
     }
 
     .nav-item {
@@ -668,7 +689,8 @@ body {
     }
 
     .nav-menu.active {
-        top: 120px; /* Position below header when active */
+        top: 120px;
+        /* Position below header when active */
     }
 
     .desktop-social-icons {
@@ -686,4 +708,3 @@ body {
         color: #bb9a57;
     }
 }
-
