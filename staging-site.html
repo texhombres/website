@@ -28,9 +28,19 @@
     <meta name="twitter:description" content="The official website for The Tex-Hombres, an Austin-based band playing classic country music." />
     <meta name="twitter:image" content="/assets/images/og/texhombres-website-image-og.jpg" />
 
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="assets/css/styles.css" as="style">
     <link rel="preload" href="https://use.typekit.net/bna3ddy.css" as="style">
+    <link rel="preload" href="/assets/videos/texhombres-website-video-hero.mp4" as="video" type="video/mp4">
     
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/bna3ddy.css">
@@ -99,7 +109,7 @@
     <header class="main-header">
         <nav class="navbar">
             <a href="#home" class="nav-logo">
-                <img src="assets/images/logo/texhombres-website-logo-main.png" alt="The Tex-Hombres Logo">
+                <img src="assets/images/logo/texhombres-website-logo-main.png" alt="The Tex-Hombres Logo" fetchpriority="high">
             </a>
 
             <div class="nav-right">
@@ -145,7 +155,7 @@
     <!-- Main content with image -->
     <main>
         <div class="hero-video-container">
-            <video autoplay loop muted playsinline poster="/assets/images/photos/texhombres-website-photo1.jpg" class="hero-video">
+            <video autoplay loop muted playsinline preload="auto" poster="/assets/images/photos/texhombres-website-photo1.jpg" class="hero-video" fetchpriority="high">
                 <source src="/assets/videos/texhombres-website-video-hero.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -199,7 +209,7 @@
             <div class="video-gallery">
                 <div class="video-item large">
                     <div class="video-embed-container">
-                        <iframe src="https://www.youtube.com/embed/UB4dMnY9euo?si=snYLHqLLsayhFcYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/UB4dMnY9euo?si=snYLHqLLsayhFcYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
                 <!-- <div class="video-item small">
@@ -392,7 +402,7 @@
         
         <div class="footer-bottom">
             <div class="footer-logo">
-                <img src="assets/images/logo/texhombres-website-logo-main.png" alt="The Tex-Hombres Logo">
+                <img src="assets/images/logo/texhombres-website-logo-main.png" alt="The Tex-Hombres Logo" loading="lazy">
             </div>
             
             <div class="footer-social">
