@@ -27,6 +27,11 @@ body {
     padding-bottom: 25px;
 }
 
+.about-border-container {
+    padding-top: 25px;
+    background-color: #1a1a1a;
+}
+
 .gradient-bar {
     height: 2px;
     background: linear-gradient(90deg, #905e26 0%, #f5ec9b 50%, #905e26 100%);
