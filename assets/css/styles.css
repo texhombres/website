@@ -113,6 +113,7 @@ h2 {
     margin-top: 30px;
     position: relative;
     transition: color 2s ease;
+    z-index: 0;
 }
 
 .btn::before {
@@ -122,7 +123,7 @@ h2 {
     background: linear-gradient(90deg, #905e26 0%, #bb9a57 50%, #905e26 100%);
     opacity: 0;
     transition: opacity 2s ease;
-    z-index: 1;
+    z-index: -1;
 }
 
 .btn:hover::before {
@@ -133,11 +134,12 @@ h2 {
     color: #ffffff;
 }
 
-/* Optional: Make the text show on top */
+/* Make sure text is always on top */
 .btn p {
-    position: relative; /* Bring the text above the pseudo-element */
-    z-index: 2; /* Ensure the text is visible */
+    position: relative;
+    z-index: 1;
     display: inline;
+    margin: 0;
 }
 
 /* 404 page button styling */
@@ -359,9 +361,6 @@ button.btn {
     color: #ffffff;
 }
 
-.shows-section .btn {
-    margin-top: 20px;
-}
 
 @media(max-width: 768px) {
     .show-item {
@@ -381,6 +380,31 @@ button.btn {
     .show-link:hover {
         color: #ffffff;
     }
+}
+
+/* Calendar Loading and Error States */
+.loading, .no-events, .error {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.1rem;
+    color: #bb9a57;
+    font-style: italic;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
 }
 
 /* Song List Section */
@@ -424,9 +448,6 @@ button.btn {
     padding: 8px 0;
 }
 
-.songlist-section .btn {
-    margin-top: 20px;
-}
 
 /* Laptop/tablet - 2 columns */
 @media(max-width: 1024px) {

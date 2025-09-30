@@ -216,30 +216,7 @@
             <h2>SHOWS</h2>
             <div class="divider"></div>
             <div class="shows-list">
-                <div class="show-item">
-                    <span class="show-date">MON 9/15</span>
-                    <span class="show-venue">San Jac Saloon</span>
-                    <span class="show-time">9:00PM</span>
-                    <a href="#" class="show-link tickets">TICKETS</a>
-                </div>
-                <div class="show-item">
-                    <span class="show-date">THU 9/18</span>
-                    <span class="show-venue">San Jac Saloon</span>
-                    <span class="show-time">9:00PM</span>
-                    <a href="#" class="show-link">DETAILS</a>
-                </div>
-                <div class="show-item">
-                    <span class="show-date">MON 9/22</span>
-                    <span class="show-venue">San Jac Saloon</span>
-                    <span class="show-time">9:00PM</span>
-                    <a href="#" class="show-link">DETAILS</a>
-                </div>
-                <div class="show-item">
-                    <span class="show-date">THU 9/25</span>
-                    <span class="show-venue">San Jac Saloon</span>
-                    <span class="show-time">9:00PM</span>
-                    <a href="#" class="show-link">DETAILS</a>
-                </div>
+                <!-- Calendar events will be loaded here dynamically -->
             </div>
             <a href="#contact" class="btn">CONTACT FOR BOOKING</a>
         </section>
@@ -432,7 +409,9 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- iCal.js for Google Calendar integration -->
+    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+    <script src="assets/js/main.js?v=10"></script>
 
 </body>
 </html>
