@@ -35,8 +35,9 @@
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/bna3ddy.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome - Defer loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -413,9 +414,9 @@
         </div>
     </footer>
 
-    <!-- iCal.js for Google Calendar integration -->
-    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
-    <script src="assets/js/main.js?v=10"></script>
+    <!-- iCal.js for Google Calendar integration - Deferred -->
+    <script defer src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+    <script defer src="assets/js/main.js?v=11"></script>
 
 </body>
 </html>
