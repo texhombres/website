@@ -182,7 +182,7 @@ button.btn {
     position: relative;
     height: 62.5vh;
     overflow: hidden;
-    background-color: #000; /* Fallback color */
+    background: #000 url('/assets/images/photos/texhombres-website-photo1.jpg') center/cover no-repeat;
 }
 
 .hero-video-container::before {
