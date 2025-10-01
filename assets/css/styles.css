@@ -182,7 +182,22 @@ button.btn {
     position: relative;
     height: 62.5vh;
     overflow: hidden;
-    background: #000 url('/assets/images/photos/texhombres-website-photo1.jpg') center/cover no-repeat;
+    background-color: #000;
+    background-image: url('/assets/images/photos/texhombres-website-photo1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: showBackground 0s ease-in 3s forwards;
+    animation-fill-mode: backwards;
+}
+
+@keyframes showBackground {
+    from {
+        background-image: none;
+    }
+    to {
+        background-image: url('/assets/images/photos/texhombres-website-photo1.jpg');
+    }
 }
 
 .hero-video-container::before {
