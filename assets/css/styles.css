@@ -598,6 +598,9 @@ button.btn {
     background-color: #1a1a1a;
     color: #ffffff;
     position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form-group input[type="date"]::-webkit-calendar-picker-indicator,
@@ -611,6 +614,26 @@ button.btn {
 .form-group input[type="date"]::-webkit-datetime-edit,
 .form-group input[type="time"]::-webkit-datetime-edit {
     color: #ffffff;
+}
+
+.form-group input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+.form-group input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+    background-color: transparent;
+}
+
+.form-group input[type="date"]::-webkit-datetime-edit-text,
+.form-group input[type="time"]::-webkit-datetime-edit-text {
+    color: #ffffff;
+}
+
+.form-group input[type="date"]::-webkit-datetime-edit-month-field,
+.form-group input[type="date"]::-webkit-datetime-edit-day-field,
+.form-group input[type="date"]::-webkit-datetime-edit-year-field,
+.form-group input[type="time"]::-webkit-datetime-edit-hour-field,
+.form-group input[type="time"]::-webkit-datetime-edit-minute-field,
+.form-group input[type="time"]::-webkit-datetime-edit-ampm-field {
+    color: #ffffff;
+    background-color: transparent;
 }
 
 .form-group input:focus,
